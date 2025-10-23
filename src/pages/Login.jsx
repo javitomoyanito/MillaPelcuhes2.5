@@ -4,7 +4,7 @@ function Login() {
         <main>
             <div className="body-div-login">
 
-                <form action="#" method="POST" className="login_form" id="login_form">
+                <form action="#" method="POST" className=".body_div_registroUsuario" id="login_form">
                     <table style={{ width: "60%", marginLeft: "20%" }}>
                         <tbody>
                             <tr>
