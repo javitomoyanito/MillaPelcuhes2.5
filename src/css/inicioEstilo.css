@@ -1,0 +1,179 @@
+/* body por defecto que incluye le fondo de ositos  */
+body {
+    background-image: url('../img/backgrounds/banner.png');
+    background-size: cover;
+    
+}
+
+
+.h1 {
+    display: flexbox;
+    color: rgb(200, 121, 121);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 50px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+/* se usa en carrito para que ocupe mas de 50% */
+.d{
+    backdrop-filter: blur(5px);
+    margin:auto ;
+    width: 70%;
+    padding: 20px;
+    background-color: rgba(151, 107, 45, 0.5);
+    border-radius: 10px;
+    border-color: #e29d09d2;
+    
+}
+
+/* lo utilizamos para las div, ocupan un 50% de la pag */
+.de{
+    /* backdrop-filter: blur(5px); */
+    width: 85%;
+    background-color: rgba(151, 107, 45, 0.5);
+    border-radius: 10px;
+    border-color: #e29d09d2;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+p {
+    color: white;
+    text-align: right;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+.p-c{
+    color: rgb(250, 213, 145);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.h3{
+    color: rgb(250, 213, 145);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);}
+
+/* p a{
+    text-decoration: none;
+} */
+form label{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    text-align: 50%;
+    color: rgb(248, 243, 236);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+} 
+form table tr td{
+    padding: none;
+    text-align: center;
+    color: rgb(74, 43, 3);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+section table tr td{
+    padding: 7px;
+    text-align: center;
+    color: rgb(247, 246, 244);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+section input{
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #0e0202;
+}
+/* para modelar el estilo de los input (basado en RegistroUsuario) */
+main div form table tr td input {
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #0e0202;
+}
+
+main div section form table tr td input{
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #0e0202;
+}
+form input{
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #0e0202;
+}
+.in-2{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+form select{
+    width: 52%;
+    padding: 5px;
+    margin: 5px;
+    color: #000000;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+button{
+    background-color: #e29d09d2;
+    color: white;
+    width: 70px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.p{
+    color: rgb(123, 119, 119);
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}

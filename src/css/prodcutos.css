@@ -1,0 +1,56 @@
+
+.card{
+    /* backdrop-filter:blur(5px); */
+    background-color: hsla(31, 72%, 60%, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+
+
+.detalles{
+    background-color: #eae72f;
+    color: rgb(159, 119, 26);
+    border: oldlace;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    
+}
+
+article a{
+    display: inline-block;
+    text-decoration: none;
+    border-radius:15px;
+}
+article p{
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+.subBack{
+    /* backdrop-filter: blur(5px); */
+    margin:auto ;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(151, 107, 45, 0.5);
+    border-radius: 10px;
+    
+}
+
+.recuatroSub{
+    padding: 20px;
+    background-color: rgba(243, 202, 79,);
+    border-radius: 10px;
+}
+
+
+article h3{
+    color: #a54776;
+}
