@@ -10,7 +10,7 @@ function BarraNav() {
                 <div className="logo">
                     <img src="/img/otro/LOGO.png" alt="" onClick={() => navigate('/')} />
                 </div>
-                <nav>
+                <nav >
                     <Link to="/productos">Productos</Link>
                     <Link to="/nosotros">Nosotros</Link>
                     <Link to="/contacto">Contacto</Link>
