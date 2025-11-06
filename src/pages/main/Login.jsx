@@ -1,75 +1,67 @@
-import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useState } from 'react';
 
-export default function Login() {
-  const nav = useNavigate();
-  const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
-  const [error, setError] = useState("");
+function Login() {
+    const [usuario, setUsuario] = useState(''); 
+    const [contrasena, setContrasena] = useState(''); 
 
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser) {
-      if (storedUser.rol === "admin") nav("/admin");
-      else nav("/");
-    }
-  }, [nav]);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Iniciando sesión con:');
+        console.log('Usuario:', usuario);
+        console.log('Contraseña:', contrasena);
+    };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+    return (
+        <div className="flex items-center justify-center min-h-screen bg-orange-50 font-sans">
+            
+            <form 
+                onSubmit={handleSubmit}
+                className="bg-white p-8 rounded-xl shadow-lg w-full max-w-sm"
+            >
+                <h2 className="text-2xl font-semibold text-gray-800 text-center mb-8">
+                    Iniciar sesión
+                </h2>
+                
+                <div className="mb-4">
+                    <input
+                        type="text"
+                        id="usuario"
+                        placeholder="Usuario"
+                        value={usuario}
+                        onChange={(e) => setUsuario(e.target.value)}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-400"
+                    />
+                </div>
 
-    // Credenciales admin
-    if (user === "admin" && pass === "admin") {
-      localStorage.setItem(
-        "user",
-        JSON.stringify({ username: "admin", rol: "admin" })
-      );
-      nav("/admin");
-      return;
-    }
+                <div className="mb-6">
+                    <input
+                        type="password"
+                        id="contrasena"
+                        placeholder="Contraseña" 
+                        value={contrasena}
+                        onChange={(e) => setContrasena(e.target.value)}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-orange-400"
+                    />
+                </div>
 
-    // Buscar usuario registrado
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const found = users.find((u) => u.username === user && u.password === pass);
+                <button 
+                    type="submit" 
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-200"
+                >
+                    Entrar
+                </button>
 
-    if (found) {
-      localStorage.setItem("user", JSON.stringify(found));
-      nav("/");
-    } else {
-      setError("Credenciales inválidas. Inténtalo nuevamente.");
-    }
-  };
-
-  return (
-    <section className="mx-auto max-w-md px-4 py-12">
-      <div className="card p-6">
-        <h1 className="text-3xl font-bold mb-4">Iniciar sesión</h1>
-        <form className="space-y-3" onSubmit={onSubmit}>
-          <input
-            className="w-full rounded-xl border p-3"
-            placeholder="Usuario"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-          />
-          <input
-            className="w-full rounded-xl border p-3"
-            placeholder="Contraseña"
-            type="password"
-            value={pass}
-            onChange={(e) => setPass(e.target.value)}
-          />
-          {error && <p className="text-red-600 text-sm">{error}</p>}
-          <button className="btn-primary w-full" type="submit">
-            Entrar
-          </button>
-        </form>
-        <p className="text-sm mt-4 opacity-80">
-          ¿No tienes cuenta?{" "}
-          <Link to="/registro" className="link">
-            Regístrate
-          </Link>
-        </p>
-      </div>
-    </section>
-  );
+                <div className="text-center mt-6 text-gray-600 text-sm">
+                    ¿No tienes cuenta?{' '}
+                    <a href="/register" className="text-orange-500 hover:underline">
+                        Regístrate
+                    </a>
+                </div>
+            </form>
+        </div>
+    );
 }
+
+export default Login;
